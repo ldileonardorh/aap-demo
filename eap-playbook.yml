@@ -3,7 +3,7 @@
 # Company: Red Hat Inc.
 # Description: Configure and install Red Hat EAP in Standalone mode
 - name: Playbook for Red Hat EAP hosts
-  hosts: eap
+  hosts: all
     #vars_files:
     # - ../vars/variables.yml
   collections:
