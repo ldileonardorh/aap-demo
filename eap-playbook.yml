@@ -1,0 +1,17 @@
+# eap-standalone.yml
+# Author: Luciano Di Leonardo
+# Company: Red Hat Inc.
+# Description: Configure and install Red Hat EAP in Standalone mode
+- name: Playbook for Red Hat EAP hosts
+  hosts: eap
+    #vars_files:
+    # - ../vars/variables.yml
+  collections:
+    - redhat.eap
+  tasks:
+    - name: Include eap role
+      ansible.builtin.include_role:
+        name: eap_install
+      vars:
+        eap_version: "8.0.0.beta"
+        eap_offline_install: True
